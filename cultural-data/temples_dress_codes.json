@@ -1,0 +1,117 @@
+{
+  "temples": [
+    {
+      "id": "kashi_vishwanath",
+      "name": "Kashi Vishwanath Temple",
+      "city": "Varanasi",
+      "state": "Uttar Pradesh",
+      "dress_code": {
+        "men": "Dhoti-Kurta or Traditional Kurta-Pyjama (Western jeans/pants restricted during Sparsh Darshan)",
+        "women": "Saree, Salwar Kameez with Dupatta (Western attire/sleeveless not permitted for Garbhagriha)",
+        "strictness_level": "High (Strict for Mangala Aarti & Sparsh Darshan)",
+        "footwear_policy": "No shoes or leather accessories (belts, wallets) allowed inside security perimeter"
+      },
+      "customs_and_etiquette": [
+        "Mobile phones and electronic gadgets must be deposited in digital lockers at Gate 4 or Ganga Dwar",
+        "Offerings must strictly be purchased from verified temple prasad counters",
+        "Aarti timings: Mangala Aarti (03:00 AM), Bhog Aarti (11:15 AM), Sandhya Aarti (07:00 PM), Shringar Aarti (09:00 PM)"
+      ],
+      "best_visiting_hours": "05:00 AM - 07:00 AM or post 08:30 PM",
+      "wheelchair_accessible": true
+    },
+    {
+      "id": "meenakshi_amman",
+      "name": "Meenakshi Sundareswarar Temple",
+      "city": "Madurai",
+      "state": "Tamil Nadu",
+      "dress_code": {
+        "men": "Dhoti with Angavastram or Kurta with formal trousers (Jeans, lungis, shorts strictly prohibited)",
+        "women": "Saree or Half-Saree or Churidar with Dupatta (Leggings, sleeveless, and western dresses banned by HC order)",
+        "strictness_level": "Very High",
+        "footwear_policy": "Strictly barefoot inside temple premises; chappal stands located at East and South gopurams"
+      },
+      "customs_and_etiquette": [
+        "Strict ban on mobile phones inside premises (Court mandated); cloak rooms available at towers",
+        "Circumbulate clockwise around sanctum shrines",
+        "Non-Hindus permitted up to the outer corridors, not inside Garbhagriha"
+      ],
+      "best_visiting_hours": "05:30 AM - 11:30 AM, 04:30 PM - 09:30 PM",
+      "wheelchair_accessible": false
+    },
+    {
+      "id": "padmanabhaswamy",
+      "name": "Sree Padmanabhaswamy Temple",
+      "city": "Thiruvananthapuram",
+      "state": "Kerala",
+      "dress_code": {
+        "men": "Bare torso (no shirts/vests) with pure cotton Dhoti (Mundu); Angavastram wrapped around waist",
+        "women": "Traditional Kerala Saree or Set-Mundu (Salwar suits and modern western wear prohibited inside inner sanctum)",
+        "strictness_level": "Highest (Ancient Vedic Protocol)",
+        "footwear_policy": "Barefoot only"
+      },
+      "customs_and_etiquette": [
+        "Only devotees practicing Hinduism are permitted inside inner sanctum",
+        "Dhotis available on rental/purchase at North and East entrance counters",
+        "Strict silence observed near the Ananthasayanam darshan doors"
+      ],
+      "best_visiting_hours": "03:30 AM - 04:45 AM (Nirmalya Darshan), 06:30 PM - 07:20 PM",
+      "wheelchair_accessible": false
+    },
+    {
+      "id": "golden_temple",
+      "name": "Harmandir Sahib (Golden Temple)",
+      "city": "Amritsar",
+      "state": "Punjab",
+      "dress_code": {
+        "men": "Modest attire covering shoulders and legs; Head must be fully covered with Rumal / Patka / Turban",
+        "women": "Modest attire covering shoulders and full legs; Head must be fully covered with Dupatta / Scarf",
+        "strictness_level": "High (Sacred Protocol)",
+        "footwear_policy": "Shoes and socks deposited at Joda Ghar; feet must be washed in holy water channel before entry"
+      },
+      "customs_and_etiquette": [
+        "Strict prohibition of tobacco, alcohol, and intoxicating substances in the entire heritage zone",
+        "Photography allowed only in the outer Parikrama; prohibited inside Sanctum Sanctorum",
+        "24/7 Guru Ka Langar open to all humanity regardless of caste, creed, or faith"
+      ],
+      "best_visiting_hours": "04:00 AM (Palki Sahib ceremony) or 10:00 PM (Sukhasan ceremony)",
+      "wheelchair_accessible": true
+    },
+    {
+      "id": "tirupati_balaji",
+      "name": "Venkateswara Swamy Temple (Tirumala)",
+      "city": "Tirupati",
+      "state": "Andhra Pradesh",
+      "dress_code": {
+        "men": "White Dhoti with Uttariyam / Kurta Pyjama (T-shirts, Bermudas, and Western jeans rejected at Vaikuntam queue)",
+        "women": "Saree or Half-Saree or Punjabi Dress with Dupatta properly pinned",
+        "strictness_level": "Very High",
+        "footwear_policy": "No footwear within the 4 Mada Streets and temple complex"
+      },
+      "customs_and_etiquette": [
+        "Govinda nama chant encouraged in queue complexes",
+        "Laddoo Prasadam token verification linked to Aadhaar/Passport ID",
+        "Electric vehicles and eco-friendly transit only on the holy hill"
+      ],
+      "best_visiting_hours": "Subject to Special Entry Darshan (SED) / Divya Darshan time-slots",
+      "wheelchair_accessible": true
+    },
+    {
+      "id": "rameshwaram_ramanathaswamy",
+      "name": "Ramanathaswamy Temple (Rameshwaram)",
+      "city": "Rameshwaram",
+      "state": "Tamil Nadu",
+      "dress_code": {
+        "men": "Dhoti or formal trousers with shirt (Wear change of dry traditional clothes after 22 Theerthams holy bath)",
+        "women": "Saree or Salwar Kameez (Dry clothes mandatory after theertham snanam before sanctum entry)",
+        "strictness_level": "High",
+        "footwear_policy": "Footwear deposited outside temple perimeter"
+      },
+      "customs_and_etiquette": [
+        "22 Sacred Theertham wells snanam is customary before presiding deity darshan",
+        "Changing rooms available immediately after 22nd theertham (Kodi Theertham)"
+      ],
+      "best_visiting_hours": "05:00 AM - 01:00 PM, 03:00 PM - 09:00 PM",
+      "wheelchair_accessible": true
+    }
+  ]
+}

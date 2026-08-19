@@ -1,0 +1,60 @@
+{
+  "destinations": [
+    {
+      "id": "varanasi",
+      "name": "Varanasi (Kashi)",
+      "state": "Uttar Pradesh",
+      "vibe_tags": ["Spiritual", "Ancient Heritage", "Ghats", "Culinary", "Mystical"],
+      "recommended_duration_days": 3,
+      "best_season": "October to March (Pleasant 14°C - 24°C)",
+      "climate_guidance": "Summer (April-June) exceeds 42°C (carry linen, hydration, umbrella). Winter mornings require warm shawls/jackets for morning Ganga boat rides.",
+      "transit_nodes": {
+        "airports": ["VNS - Lal Bahadur Shastri International Airport, Babatpur (26 km)"],
+        "railway_stations": ["BSB - Varanasi Junction (Cantt)", "DDU - Pt. Deen Dayal Upadhyaya Junction (16 km)", "BSBS - Banaras Station"],
+        "intercity_bus": ["Varanasi Cantt ISBT", "UPSRTC Volvo Services"]
+      }
+    },
+    {
+      "id": "madurai",
+      "name": "Madurai (Temple City)",
+      "state": "Tamil Nadu",
+      "vibe_tags": ["Dravidian Architecture", "Spiritual", "Culinary Legend", "Heritage", "Night Markets"],
+      "recommended_duration_days": 2,
+      "best_season": "November to February (22°C - 30°C)",
+      "climate_guidance": "Tropical climate with intense daytime sun. Wear light breathable cottons; carry socks/foot protectors as stone temple floors heat up quickly by noon.",
+      "transit_nodes": {
+        "airports": ["IXM - Madurai International Airport (12 km)"],
+        "railway_stations": ["MDU - Madurai Junction"],
+        "intercity_bus": ["Mattuthavani Integrated Bus Terminus (MIBT)", "Arapalayam Bus Stand"]
+      }
+    },
+    {
+      "id": "amritsar",
+      "name": "Amritsar",
+      "state": "Punjab",
+      "vibe_tags": ["Sacred Devotion", "Patriotic Heritage", "Food Capital", "Warm Hospitality"],
+      "recommended_duration_days": 2,
+      "best_season": "October to March",
+      "climate_guidance": "Winter (Dec-Jan) drops to 4°C with dense fog (woolens, thermals needed). Summers are dry and hot (38°C - 44°C).",
+      "transit_nodes": {
+        "airports": ["ATQ - Sri Guru Ram Dass Jee International Airport (11 km)"],
+        "railway_stations": ["ASR - Amritsar Junction"],
+        "intercity_bus": ["Amritsar Central Bus Stand"]
+      }
+    },
+    {
+      "id": "rameshwaram",
+      "name": "Rameshwaram (Holy Island)",
+      "state": "Tamil Nadu",
+      "vibe_tags": ["Island Pilgrimage", "Pamban Sea Bridge", "Dhanushkodi Ghost Town", "Serene Oceans"],
+      "recommended_duration_days": 2,
+      "best_season": "October to April",
+      "climate_guidance": "Humid coastal weather with ocean breezes. Keep quick-drying traditional clothing handy for 22 Theertham holy snanam.",
+      "transit_nodes": {
+        "airports": ["IXM - Madurai (175 km, 3.5 hrs by road/train)"],
+        "railway_stations": ["RMM - Rameshwaram Railway Station", "MMM - Mandapam"],
+        "intercity_bus": ["Rameshwaram SETC Bus Stand"]
+      }
+    }
+  ]
+}

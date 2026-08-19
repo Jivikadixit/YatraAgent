@@ -1,0 +1,251 @@
+{
+  "cuisines": [
+    {
+      "id": "varanasi",
+      "region": "Varanasi (Banaras)",
+      "city_keywords": ["varanasi", "kashi", "banaras", "benaras", "sarnath"],
+      "culinary_tradition": "Kashi Sattvic & Traditional Ghat Gastronomy",
+      "dietary_attributes": ["Pure Vegetarian", "Sattvic (No Onion / No Garlic)", "Jain Compliant"],
+      "iconic_dishes": [
+        {
+          "name": "Kashi Banarasi Tamatar Chaat",
+          "description": "Slow-simmered spiced tomatoes with crushed crisp namakpare and hing-infused syrup.",
+          "best_places": ["Kashi Chaat Bhandar (Godowlia)", "Deena Chaat Bhandar (Dashashwamedh)"],
+          "dietary_type": "Vegetarian / Sattvic",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Malaiyyo (Makhan Malai)",
+          "description": "Winter delicacy of dew-churned saffron foam infused with green cardamom, pistachios, and silver leaf.",
+          "best_places": ["Chaukhamba Chowk", "Thatheri Bazar (Neelkanth Gali)"],
+          "dietary_type": "Vegetarian / Sattvic",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Banarasi Sattvic Thali",
+          "description": "Authentic temple feast of Baati Chokha (cooked in desi ghee without onion/garlic), Dal Tadka, and Kheer.",
+          "best_places": ["Baati Chokha Restaurant (Teliabagh)", "Aflatoon Sattvic Bhojnalaya"],
+          "dietary_type": "Sattvic (No Onion/Garlic)",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Kachori Jalebi Morning Breakfast",
+          "description": "Crisp urad-dal stuffed poori served with spiced pumpkin subzi and hot syrupy jalebis.",
+          "best_places": ["Ram Bhandar (Thatheri Bazar)", "Madhur Milan (Godowlia)"],
+          "dietary_type": "Pure Vegetarian",
+          "jain_customizable": false,
+          "is_vegetarian": true
+        }
+      ]
+    },
+    {
+      "id": "madurai",
+      "region": "Madurai & Chettinad",
+      "city_keywords": ["madurai", "chettinad", "meenakshi"],
+      "culinary_tradition": "Pandyan & Chettiar Temple Heritage Cuisine",
+      "dietary_attributes": ["South Indian Pure Veg", "Brahmin Mess", "Chettinad Special"],
+      "iconic_dishes": [
+        {
+          "name": "Madurai Famous Jigarthanda",
+          "description": "Royal cooling beverage made with almond gum (badam pisin), nannari roots, condensed milk, and basundi cream.",
+          "best_places": ["Famous Jigarthanda (East Marret St)", "Murugan Special Jigarthanda"],
+          "dietary_type": "Vegetarian",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Murugan Ghee Podi Idli & Medu Vadai",
+          "description": "Steamed fluffy idlis drenched in pure ghee and spicy gunpowder podi, served with 4 fresh chutneys.",
+          "best_places": ["Murugan Idli Shop (West Masi St)", "Sree Sabarees (Town Hall Rd)"],
+          "dietary_type": "Pure Vegetarian",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Chettinad Banana Leaf Feast (Saiva Sapadu)",
+          "description": "Seeraga Samba rice, Kovil Vatha Kuzhambu, Mor Kuzhambu, Appalam, Paruppu Podi with Ghee, and Elaneer Payasam.",
+          "best_places": ["The Modern Restaurant (Netaji Rd)", "Gopala Mess"],
+          "dietary_type": "South Indian Pure Veg",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Madurai Kari Dosai & Mutton Chukka",
+          "description": "Thick layered spongy dosai topped with minced spiced meat, eggs, and rich salna curry.",
+          "best_places": ["Simmakkal Konar Mess", "Amma Mess (Alagar Kovil Rd)"],
+          "dietary_type": "Non-Vegetarian",
+          "jain_customizable": false,
+          "is_vegetarian": false
+        }
+      ]
+    },
+    {
+      "id": "rameshwaram",
+      "region": "Rameshwaram (Island Coastal)",
+      "city_keywords": ["rameshwaram", "rameswaram", "dhanushkodi", "pamban"],
+      "culinary_tradition": "Island Temple Bhojanam & Coastal Heritage",
+      "dietary_attributes": ["Brahmin Bhojan", "Pure Veg Sattvic", "Fresh Island Seafood"],
+      "iconic_dishes": [
+        {
+          "name": "Ramanathaswamy Temple Prasadam & Sakkarai Pongal",
+          "description": "Divine jaggery rice infused with green cardamom, roasted cashews, raisins, and aromatic camphor.",
+          "best_places": ["Temple Devasthanam Prasadam Stall", "Shree Ram Nivas Brahmin Mess"],
+          "dietary_type": "Sattvic / Pure Veg",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Traditional South Indian Brahmin Meals",
+          "description": "Unlimited hot rice, Kovil Milagu Rasam, Sambar, Cabbage Kootu, Potato Roast, Curd and Payasam on banana leaf.",
+          "best_places": ["Hotel Sri Saravana (West Car St)", "Aryas Vegetarian (Near Temple)"],
+          "dietary_type": "Pure Vegetarian",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Fresh Pamban Sea Fisherfolk Curry",
+          "description": "Locally caught sea fish cooked in tangy tamarind and shallot coastal gravy with steamed rice.",
+          "best_places": ["Sea Pearl Restaurant", "Coastal Fisherfolk Shack (Dhanushkodi)"],
+          "dietary_type": "Non-Vegetarian",
+          "jain_customizable": false,
+          "is_vegetarian": false
+        }
+      ]
+    },
+    {
+      "id": "amritsar",
+      "region": "Amritsar (Punjab)",
+      "city_keywords": ["amritsar", "golden temple", "punjab", "wagah"],
+      "culinary_tradition": "Majha Punjabi Dhaba & Sacred Langar Gastronomy",
+      "dietary_attributes": ["Pure Desi Ghee", "Sattvic Langar", "Tandoori Delicacies"],
+      "iconic_dishes": [
+        {
+          "name": "Guru Ka Langar Mah Di Dal & Kheer",
+          "description": "Sacred community kitchen black lentils slow-cooked overnight in pure desi ghee with reverent simplicity.",
+          "best_places": ["Harmandir Sahib Langar Hall (Golden Temple)"],
+          "dietary_type": "Pure Vegetarian / Sattvic",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Amritsari Stuffed Kulcha & Chole",
+          "description": "Crisp layered tandoor-baked bread filled with spiced potatoes/paneer, drenched in white butter.",
+          "best_places": ["Bhai Kulwant Singh Kulchian Wale", "Kulcha Land (Ranjit Avenue)"],
+          "dietary_type": "Pure Vegetarian",
+          "jain_customizable": false,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Kesar Da Dhaba Kali Dal & Firni",
+          "description": "Century-old recipe of slow-simmered urad dal paired with saffron firni served in earthen matkas.",
+          "best_places": ["Kesar Da Dhaba (Chowk Passian)"],
+          "dietary_type": "Pure Vegetarian",
+          "jain_customizable": false,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Amritsari Machhi (Crisp Fried Fish)",
+          "description": "Fresh river fish coated in carom seeds (ajwain) and gram flour batter, fried to golden perfection.",
+          "best_places": ["Makhan Fish Corner (Majitha Rd)", "Beera Chicken House"],
+          "dietary_type": "Non-Vegetarian",
+          "jain_customizable": false,
+          "is_vegetarian": false
+        }
+      ]
+    },
+    {
+      "id": "tirupati",
+      "region": "Tirupati (Tirumala Hills)",
+      "city_keywords": ["tirupati", "tirumala", "balaji", "chandragiri"],
+      "culinary_tradition": "Venkateswara Temple Prasadam & Rayalaseema Vegetarian",
+      "dietary_attributes": ["Pure Vegetarian", "Sattvic (No Garlic/No Onion)", "Jain Compliant"],
+      "iconic_dishes": [
+        {
+          "name": "Tirupati Laddu & Pulihora Prasadam",
+          "description": "GI-tagged sacred besan laddu with rich dry fruits and tangy spiced tamarind rice (Pulihora).",
+          "best_places": ["TTD Potu Prasadam Counters", "Sree Venkateswara Canteen"],
+          "dietary_type": "Sattvic (Pure Veg)",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Rayalaseema Brahmin Thali",
+          "description": "Steamed Sona Masoori rice, Tomato Pappu, Drumstick Sambar, Majjiga Pulusu, and Ghee.",
+          "best_places": ["Hotel Bliss (Near Station)", "Bhimas Deluxe Residency"],
+          "dietary_type": "Pure Vegetarian",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        }
+      ]
+    },
+    {
+      "id": "kerala",
+      "region": "Kerala & Thiruvananthapuram",
+      "city_keywords": ["kerala", "thiruvananthapuram", "trivandrum", "padmanabhaswamy", "kovalam", "kochi"],
+      "culinary_tradition": "Travancore Royal Sadhya & Malabar Coastline",
+      "dietary_attributes": ["Traditional Veg Sadhya", "Coconut Infused", "Fresh Seafood"],
+      "iconic_dishes": [
+        {
+          "name": "Traditional Kerala Sadhya (24-Dish Banana Leaf Feast)",
+          "description": "Red Matta rice, Avial, Thoran, Olan, Kalan, Parippu with Desi Ghee, Sharkara Upperi, and Ada Pradhaman Payasam.",
+          "best_places": ["Mothers Veg Plaza (Bakery Junction)", "Maha Chandra Bhavan"],
+          "dietary_type": "Pure Vegetarian / Sattvic",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Appam with Vegetable Ishtu (Stew)",
+          "description": "Lacy-edged fermented rice hoppers served with coconut milk vegetable stew infused with green chillies and ginger.",
+          "best_places": ["Arya Nivas (Aristo Junction)", "Villa Maya Heritage"],
+          "dietary_type": "Vegetarian / Vegan",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Karimeen Pollichathu (Pearl Spot in Banana Leaf)",
+          "description": "Fresh pearl spot fish marinated in shallots, coconut oil and Malabar spices, wrapped and pan-roasted in banana leaves.",
+          "best_places": ["Zam Zam Restaurant", "Bait Seafood (Kovalam)"],
+          "dietary_type": "Non-Vegetarian",
+          "jain_customizable": false,
+          "is_vegetarian": false
+        }
+      ]
+    },
+    {
+      "id": "delhi",
+      "region": "Delhi & Northern Plains",
+      "city_keywords": ["delhi", "new delhi", "noida", "gurgaon", "agra", "jaipur"],
+      "culinary_tradition": "Old Delhi Purani Dilli & Mughal Heritage",
+      "dietary_attributes": ["North Indian Veg", "Street Gastronomy", "Mughlai"],
+      "iconic_dishes": [
+        {
+          "name": "Chandni Chowk Paranthe & Dal Makhani",
+          "description": "Deep-fried stuffed crisp paranthas with sweet pumpkin mash, tamarind chutney, and slow-cooked black lentils.",
+          "best_places": ["Pandit Gaya Prasad Shiv Charan (Paranthe Wali Gali)", "Gulab Pure Veg"],
+          "dietary_type": "Vegetarian",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Old Delhi Kulfi Falooda & Rabri",
+          "description": "Thick pistachio and rose kulfi served over silken cornstarch noodles and reduced condensed milk.",
+          "best_places": ["Giani di Hatti (Fatehpuri)", "Kuremal Mohan Lal Kulfi"],
+          "dietary_type": "Vegetarian",
+          "jain_customizable": true,
+          "is_vegetarian": true
+        },
+        {
+          "name": "Mughlai Dum Biryani & Butter Chicken",
+          "description": "Fragrant basmati rice dum-cooked with tender chicken and saffron, paired with buttery tomato gravy.",
+          "best_places": ["Karim's (Jama Masjid)", "Moti Mahal (Daryaganj)"],
+          "dietary_type": "Non-Vegetarian",
+          "jain_customizable": false,
+          "is_vegetarian": false
+        }
+      ]
+    }
+  ]
+}

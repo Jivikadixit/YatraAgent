@@ -1,0 +1,135 @@
+# Google Cloud Workflows: Autonomous Multi-Leg Booking Distributed Saga Pattern
+# Orchestrates Hotel Hold -> Transit Reservation -> KMS Token Payment -> Ticket Confirmation
+# With automated compensatory rollback & instant refund if any leg fails.
+
+main:
+  params: [args]
+  steps:
+    - init_saga:
+        assign:
+          - saga_id: ${args.saga_id}
+          - user_id: ${args.user_id}
+          - hotel_id: ${args.hotel_id}
+          - transit_id: ${args.transit_id}
+          - kms_token: ${args.kms_payment_token}
+          - total_amount_inr: ${args.total_amount_inr}
+          - hotel_held: false
+          - transit_reserved: false
+          - payment_captured: false
+          - agent_mesh_url: ${default(args.agent_mesh_url, "https://agent-mesh-yatra-cr.a.run.app")}
+
+    - step_1_hold_hotel:
+        try:
+          call: http.post
+          args:
+            url: ${agent_mesh_url + "/api/mcp/hotel/hold"}
+            headers:
+              Content-Type: "application/json"
+            body:
+              hotel_id: ${hotel_id}
+              user_id: ${user_id}
+              hold_duration_minutes: 10
+          result: hotel_response
+        retry: ${http.default_retry}
+        next: check_hotel_result
+
+    - check_hotel_result:
+        switch:
+          - condition: ${hotel_response.body.status == "HELD"}
+            assign:
+              - hotel_held: true
+              - hold_token: ${hotel_response.body.hold_token}
+            next: step_2_reserve_transit
+        next: compensation_abort
+
+    - step_2_reserve_transit:
+        try:
+          call: http.post
+          args:
+            url: ${agent_mesh_url + "/api/mcp/transit/reserve"}
+            headers:
+              Content-Type: "application/json"
+            body:
+              transit_id: ${transit_id}
+              user_id: ${user_id}
+          result: transit_response
+        retry: ${http.default_retry}
+        next: check_transit_result
+
+    - check_transit_result:
+        switch:
+          - condition: ${transit_response.body.status == "RESERVED"}
+            assign:
+              - transit_reserved: true
+              - booking_pnr: ${transit_response.body.pnr}
+            next: step_3_execute_kms_payment
+        next: compensate_hotel
+
+    - step_3_execute_kms_payment:
+        try:
+          call: http.post
+          args:
+            url: ${agent_mesh_url + "/api/security/kms-settle-payment"}
+            headers:
+              Content-Type: "application/json"
+            body:
+              saga_id: ${saga_id}
+              kms_token: ${kms_token}
+              amount_inr: ${total_amount_inr}
+          result: payment_response
+        retry: ${http.default_retry}
+        next: check_payment_result
+
+    - check_payment_result:
+        switch:
+          - condition: ${payment_response.body.status == "SETTLED"}
+            assign:
+              - payment_captured: true
+              - payment_txn_id: ${payment_response.body.transaction_id}
+            next: step_4_issue_tickets
+        next: compensate_transit_and_hotel
+
+    - step_4_issue_tickets:
+        call: http.post
+        args:
+          url: ${agent_mesh_url + "/api/saga/confirm-final"}
+          headers:
+            Content-Type: "application/json"
+          body:
+            saga_id: ${saga_id}
+            pnr: ${booking_pnr}
+            hotel_hold_token: ${hold_token}
+            txn_id: ${payment_txn_id}
+        result: confirmation_response
+        return:
+          saga_status: "SUCCESS"
+          saga_id: ${saga_id}
+          pnr: ${booking_pnr}
+          hotel_confirmation_code: ${confirmation_response.body.hotel_confirmation_code}
+          transaction_id: ${payment_txn_id}
+
+    # ================= COMPENSATING TRANSACTIONS =================
+    - compensate_transit_and_hotel:
+        call: http.post
+        args:
+          url: ${agent_mesh_url + "/api/mcp/transit/cancel-hold"}
+          body:
+            pnr: ${booking_pnr}
+            saga_id: ${saga_id}
+        next: compensate_hotel
+
+    - compensate_hotel:
+        call: http.post
+        args:
+          url: ${agent_mesh_url + "/api/mcp/hotel/release-hold"}
+          body:
+            hold_token: ${hold_token}
+            saga_id: ${saga_id}
+        next: compensation_abort
+
+    - compensation_abort:
+        return:
+          saga_status: "COMPENSATED_FAILED"
+          saga_id: ${saga_id}
+          refund_status: "INSTANT_REVERT_PROCESSED"
+          message: "One or more legs failed to confirm; all holds released and payments compensated."

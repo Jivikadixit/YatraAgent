@@ -8,12 +8,7 @@
 
 ## 🌟 Executive Overview & Mission
 
-**YatraAgent** is a next-generation autonomous travel planning and multi-modal booking platform specifically architected for Indian cultural journeys, pilgrimages, and heritage tourism. It solves the fragmentation of Indian travel planning by unifying:
-1. **Gemini 2.5 Cognitive Planner** with RAG-grounded temple attire, rituals, and strict regional dietary filters (*Jain, Sattvic, Pure Veg*).
-2. **Multi-Modal Transit Optimizer (MCP)** with Amadeus/Google Flights GDS integration, IRCTC Tatkal waitlist predictors, and redBus connectivity.
-3. **10-Minute Heritage Stay Soft-Hold & Lock Manager** to prevent room loss while organizing transit.
-4. **Mandatory OTP Payment Authorization Rail** with Cloud KMS encryption and instant ticket issuance.
-5. **Distributed Multi-Leg Saga Coordinator** with 100% automated compensatory rollback and instant refund guarantees.
+**YatraAgent** is an end-to-end, multi-agent travel orchestrator that doesn't just "suggest"—it acts. By deploying TinyFish’s Web Agent inside a Google ADK multi-agent architecture, YatraAgent autonomously navigates live booking portals (IRCTC, flight aggregators, hotel search engines) in real time to fetch exact prices, live transit schedules, and un-cached availability.
 
 ---
 

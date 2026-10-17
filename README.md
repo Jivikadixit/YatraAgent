@@ -11,8 +11,9 @@
 **YatraAgent** is an end-to-end, multi-agent travel orchestrator that doesn't just "suggest"—it acts. By deploying TinyFish’s Web Agent inside a Google ADK multi-agent architecture, YatraAgent autonomously navigates live booking portals (IRCTC, flight aggregators, hotel search engines) in real time to fetch exact prices, live transit schedules, and un-cached availability.
 
 ---
-
 ## 📐 System Architecture
+
+
 
 ```mermaid
 flowchart TB
@@ -38,6 +39,7 @@ flowchart TB
             FlightMCP[flight_finder_mcp: Amadeus / Google Flights]
             TrainMCP[train_finder_mcp: IRCTC Tatkal WL Engine]
             BusMCP[bus_finder_mcp: redBus Intercity]
+            TinyFishMCP[tinyfish_mcp: Autonomous Cloud Browser & Extraction]
             OptMCP[Pareto Transit Solver]
             HotelMCP[hotel_hold_manager: 10-Min TTL Lock]
         end
@@ -58,6 +60,7 @@ flowchart TB
         BQ[(BigQuery ML: ARIMA_PLUS & Boosted Trees)]
         Firestore[(Firestore 30-Day Interaction Store)]
         BankRail[NPCI UPI 2.0 & Bank Payment Rail]
+        LivePortals[Live Web Portals: IRCTC & Flight/Bus Sites]
     end
 
     UI --> Router
@@ -72,6 +75,11 @@ flowchart TB
     MemEngine --> Firestore
     
     OptMCP --> FlightMCP & TrainMCP & BusMCP
+    TrainMCP --> TinyFishMCP
+    FlightMCP --> TinyFishMCP
+    BusMCP --> TinyFishMCP
+    
+    TinyFishMCP --> LivePortals
     TrainMCP --> BQ
     
     Orchestrator --> HotelMCP
@@ -81,8 +89,9 @@ flowchart TB
     Orchestrator --> Compensator
 ```
 
----
 
+
+--- 
 ## 🔄 End-to-End Multi-Leg Saga Booking & OTP Flow
 
 ```mermaid
@@ -169,21 +178,23 @@ graph TD
 | **Separated Bookings** | Flight, Train, and Bus bookings are completely isolated from accommodation by default, with an optional 1-click bundle checkbox. |
 | **Distributed Saga Engine** | Multi-leg transaction coordinator with 100% automated compensatory rollback protecting travelers from partial booking failures. |
 
+
 ---
 
 ## 💎 The X-Factors (Why YatraAgent Stands Out)
 
 1. **Zero-Touch Multi-Leg Protection**: In traditional platforms, if a flight gets booked but the return train or hotel fails, travelers face manual cancellations and steep penalties. YatraAgent's Saga Coordinator makes multi-leg bookings **atomic**—all succeed together, or everything is automatically refunded with zero cancellation fees.
-2. **Culturally Aware Cognitive Engine**: Travel apps fail in India when they suggest non-vegetarian dining in sacred zones or ignore temple dress codes. YatraAgent natively understands Vedic temple customs, Aarti timings, and strict Jain/Sattvic dietary rules.
-3. **BigQuery ML Tatkal & Fare Forecaster**: Evaluates historical rail waitlists and flight pricing trends to recommend the mathematically optimal booking window.
+2. **TinyFish serves as an Autonomous Cloud Browser Engine** that acts like a human browsing the web. Instead of relying on static HTML parsers, TinyFish launches managed headless browser sessions equipped with residential proxies and anti-detection capabilities to navigate dynamic portals in real time.
+3. **Culturally Aware Cognitive Engine**: Travel apps fail in India when they suggest non-vegetarian dining in sacred zones or ignore temple dress codes. YatraAgent natively understands Vedic temple customs, Aarti timings, and strict Jain/Sattvic dietary rules.
+4. **BigQuery ML Tatkal & Fare Forecaster**: Evaluates historical rail waitlists and flight pricing trends to recommend the mathematically optimal booking window.
 
 ---
 
 ## 🛠️ Technology Stack
 
 - **Frontend**: React 18, TypeScript, Vite, Tailwind CSS, Lucide Icons
-- **Backend API**: Python 3.11+, FastAPI, Uvicorn, Pydantic
-- **AI & Reasoning**: Google Gemini 2.5 Flash / Pro, Retrieval-Augmented Generation (RAG)
+- **Backend API**: Python 3.11+, FastAPI, Tinyfish, Uvicorn, Pydantic
+- **AI & Reasoning**: Google Gemini 2.5 Flash / Pro, Retrieval-Augmented Generation (RAG),Google ADK
 - **Analytics & ML**: Google BigQuery ML (ARIMA_PLUS & Boosted Trees)
 - **Security & Privacy**: Google Cloud KMS (Envelope Encryption AES-256-GCM), DigiLocker tokenization
 - **Orchestration**: Cloud Workflows, Distributed Saga Coordinator
